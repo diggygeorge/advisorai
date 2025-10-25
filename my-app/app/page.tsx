@@ -2,6 +2,27 @@
 
 import { useState } from 'react'
 import { signOut } from '../app/logout/actions'
+import { Archivo_Black } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
+
+
+const archivo = Archivo_Black({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['500'],
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['500'],
+});
+
 
 export default function Dashboard() {
   const [major, setMajor] = useState('')
@@ -16,12 +37,13 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
-        <div className="text-2xl font-bold text-blue-600">AdvisorAI</div>
+      <nav className="flex justify-between items-center px-6 py-4 bg-slate-700 shadow-md">
+        <div className={`${archivo.className} text-2xl tracking-wider font-bold text-white`}>
+          AdvisorAI</div>
         <form action={signOut}>
           <button
             type="submit"
-            className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600 transition"
+            className={`${inter.className} rounded-md bg-white px-4 py-2 text-slate-700 hover:bg-slate-200 transition`}
           >
             Sign Out
           </button>
@@ -30,7 +52,7 @@ export default function Dashboard() {
 
       {/* Main Content */}
       <main className="flex flex-col items-center justify-center mt-20 px-4">
-        <h1 className="text-3xl font-semibold mb-6">Plan Your Path</h1>
+      <h1 className={`${playfair.className} text-slate-900 text-4xl font-semibold mb-6`}>Plan Your Path</h1>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 w-full max-w-md bg-white p-6 rounded-lg shadow-md"
@@ -51,7 +73,7 @@ export default function Dashboard() {
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            className="px-4 py-2 bg-slate-700 text-white rounded-md hover:bg-slate-900 transition"
           >
             OK
           </button>
