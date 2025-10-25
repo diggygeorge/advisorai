@@ -1,31 +1,62 @@
-// app/page.tsx (or wherever HomePage lives)
-import { createClient } from '@/utils/supabase/server'
+'use client'
+
+import { useState } from 'react'
 import { signOut } from '../app/logout/actions'
-import { redirect } from 'next/navigation'
 
-export default async function HomePage() {
-  const supabase = await createClient()
+export default function Dashboard() {
+  const [major, setMajor] = useState('')
+  const [career, setCareer] = useState('')
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user) {
-    redirect('/login')
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log({ major, career })
+    // TODO: send these inputs to your AdvisorAI backend
   }
 
   return (
-    <main className="p-10">
-      <h1 className="text-2xl font-semibold">Welcome, {user.email}</h1>
+    <div className="min-h-screen bg-gray-50">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+        <div className="text-2xl font-bold text-blue-600">AdvisorAI</div>
+        <form action={signOut}>
+          <button
+            type="submit"
+            className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600 transition"
+          >
+            Sign Out
+          </button>
+        </form>
+      </nav>
 
-      <form action={signOut}>
-        <button
-          type="submit"
-          className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600 transition"
+      {/* Main Content */}
+      <main className="flex flex-col items-center justify-center mt-20 px-4">
+        <h1 className="text-3xl font-semibold mb-6">Plan Your Path</h1>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 w-full max-w-md bg-white p-6 rounded-lg shadow-md"
         >
-          Sign Out
-        </button>
-      </form>
-    </main>
+          <input
+            type="text"
+            placeholder="Enter your major"
+            value={major}
+            onChange={(e) => setMajor(e.target.value)}
+            className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="text"
+            placeholder="Enter your career path"
+            value={career}
+            onChange={(e) => setCareer(e.target.value)}
+            className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+          >
+            OK
+          </button>
+        </form>
+      </main>
+    </div>
   )
 }
