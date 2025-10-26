@@ -1,8 +1,52 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Features
+
+- Course recommendations using your JSON data files
+- Optional AI-powered recommendations using OpenAI's GPT-4
+- Optional integration with Supabase for vector search
+- Interactive course browsing with filtering
+- Academic schedule planning
+- Real-time recommendations based on career path
+- Works with or without external API keys
+
+## Environment Setup
+
+The application works with or without environment variables. For enhanced AI features, create a `.env.local` file in the root directory with the following variables:
+
+```bash
+# OpenAI API Key for enhanced AI recommendations (optional)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Supabase Configuration for vector search (optional)
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url_here
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
+
+# O*NET API for real-time career data (optional)
+ONET_API_KEY=your_onet_api_key_here
+```
+
+**Note**: Without these environment variables, the app will use basic course recommendations from the JSON data files.
+
+### O*NET API Setup
+
+For comprehensive career data, you can integrate the O*NET API:
+
+1. **Get API Access**: Visit [O*NET Center](https://www.onetcenter.org/) and register for API access
+2. **Add API Key**: Add `ONET_API_KEY` to your `.env.local` file
+3. **Test Integration**: The system will automatically use O*NET data when available
+
+See `ONET_SETUP.md` for detailed integration instructions.
+
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,7 +58,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3002](http://localhost:3002) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

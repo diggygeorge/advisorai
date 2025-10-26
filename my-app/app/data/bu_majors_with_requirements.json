@@ -1,0 +1,296 @@
+{
+  "colleges": [
+    {
+      "name": "CAS",
+      "majors": [
+        {
+          "name": "Computer Science",
+          "programUrl": "https://www.bu.edu/academics/cas/programs/computer-science/ba/",
+          "courses": [
+            {
+              "title": "CAS CS 111 - Introduction to Computer Science 1",
+              "code": "CAS CS 111",
+              "skills": "Programming fundamentals (Python/Java/C++), computational thinking, problem decomposition",
+              "careerRelevance": "Foundation for all CS upper-level courses; used in software roles",
+              "prerequisites": "None (placement/AP may allow advanced start)",
+              "group": "Core (Group A: Foundational)"
+            },
+            {
+              "title": "CAS CS 112 - Introduction to Computer Science 2",
+              "code": "CAS CS 112",
+              "skills": "Intermediate programming, data modeling, object-oriented design",
+              "careerRelevance": "Required core for CS majors; enables data structures & systems courses",
+              "prerequisites": "CAS CS 111",
+              "group": "Core (Group A: Foundational)"
+            },
+            {
+              "title": "CAS CS 131 - Combinatoric Structures",
+              "code": "CAS CS 131",
+              "skills": "Discrete math, combinatorics, counting, basic proof techniques",
+              "careerRelevance": "Mathematical foundation for algorithms, theory, and many CS electives",
+              "prerequisites": "Comfort with high-school math; CS111 recommended",
+              "group": "Core (Group A: Foundational)"
+            },
+            {
+              "title": "CAS CS 210 - Computer Systems",
+              "code": "CAS CS 210",
+              "skills": "Systems thinking, low-level programming, OS concepts, concurrency",
+              "careerRelevance": "Essential for systems, networking, embedded, and performance-oriented roles",
+              "prerequisites": "CAS CS 111/112 (check catalog for formal prereq)",
+              "group": "Core (Group A: Foundational)"
+            },
+            {
+              "title": "CAS CS 330 - Introduction to the Analysis of Algorithms",
+              "code": "CAS CS 330",
+              "skills": "Algorithm design, complexity analysis, correctness proofs",
+              "careerRelevance": "Central for technical interviews, research, and advanced algorithms",
+              "prerequisites": "CAS CS 112, CAS CS 131 (or equivalents); check catalog",
+              "group": "Core (Group A: Foundational)"
+            },
+            {
+              "title": "CAS CS 132 - Geometrical Algorithms",
+              "code": "CAS CS 132",
+              "skills": "Algorithmic geometry, data structures for geometric data",
+              "careerRelevance": "Useful for graphics, computational geometry, robotics, GIS",
+              "prerequisites": "CAS CS 112 / CS131 or department consent",
+              "group": "Formal Tools (Group B)"
+            },
+            {
+              "title": "CAS CS 235 - Algebraic Algorithms",
+              "code": "CAS CS 235",
+              "skills": "Algebraic techniques for algorithms, FFT, number-theoretic methods",
+              "careerRelevance": "Useful for theory, cryptography, and computational math",
+              "prerequisites": "CAS CS 112 / relevant math (MA 294 substitution possible)",
+              "group": "Formal Tools (Group B)"
+            },
+            {
+              "title": "CAS CS 237 - Probability in Computing",
+              "code": "CAS CS 237",
+              "skills": "Probability & randomized algorithms, probabilistic analysis",
+              "careerRelevance": "Important for ML, randomized algorithms, systems performance",
+              "prerequisites": "CAS CS 112; MA/CS probability alternatives may substitute",
+              "group": "Formal Tools (Group B)"
+            },
+            {
+              "title": "CAS CS 320 - Concepts of Programming Languages",
+              "code": "CAS CS 320",
+              "skills": "Languages paradigms, type systems, semantics, interpreters",
+              "careerRelevance": "Essential for compilers, PL research, advanced software design",
+              "prerequisites": "CAS CS 112, CS 131/330 recommended",
+              "group": "Central Topics (Group C)"
+            },
+            {
+              "title": "CAS CS 332 - Elements of the Theory of Computation",
+              "code": "CAS CS 332",
+              "skills": "Automata, computability, formal languages, complexity theory",
+              "careerRelevance": "Foundation for theoretical CS, cryptography, formal methods",
+              "prerequisites": "CS 131 and CS 330 or equivalents; check catalog",
+              "group": "Central Topics (Group C)"
+            },
+            {
+              "title": "CAS CS 350 - Fundamentals of Computing Systems",
+              "code": "CAS CS 350",
+              "skills": "Advanced systems, distributed/parallel concepts, architecture",
+              "careerRelevance": "Prepares for systems engineering, distributed systems, cloud roles",
+              "prerequisites": "CS 210 or instructor consent; check catalog",
+              "group": "Central Topics (Group C)"
+            },
+            {
+              "title": "CS 300/400/500-level electives",
+              "code": "Various",
+              "skills": "Advanced topics: ML, databases, security, graphics, NLP, etc",
+              "careerRelevance": "Specialization & career alignment depends on electives",
+              "prerequisites": "Depends on each elective (often CS 111/112 and other foundations)",
+              "group": "Elective (Group D)"
+            }
+          ]
+        },
+        {
+          "name": "Mathematics",
+          "programUrl": "https://www.bu.edu/academics/cas/programs/mathematics-statistics/ba/",
+          "courses": [
+            {
+              "title": "Calculus I",
+              "code": "CAS MA 123 or MA 121",
+              "skills": "Single-variable calculus, limits, derivatives, integrals",
+              "careerRelevance": "Foundation for all quantitative majors and technical roles",
+              "prerequisites": "Placement or high-school calculus—AP/placement may apply",
+              "group": "Foundational (Lower Division)"
+            },
+            {
+              "title": "Calculus II",
+              "code": "CAS MA 124 (or MA 122)",
+              "skills": "Sequences, series, techniques of integration, introductory ODEs",
+              "careerRelevance": "Required for multivariate calculus, analysis, modeling",
+              "prerequisites": "MA 123 / placement",
+              "group": "Foundational (Lower Division)"
+            },
+            {
+              "title": "Multivariate Calculus",
+              "code": "CAS MA 225 or MA 230",
+              "skills": "Vector calculus, partial derivatives, multiple integrals",
+              "careerRelevance": "Needed for physics, engineering, numerical methods, ML",
+              "prerequisites": "MA 124 or placement",
+              "group": "Foundational (Lower Division)"
+            },
+            {
+              "title": "Differential Equations",
+              "code": "CAS MA 226 or MA 231",
+              "skills": "Ordinary differential equations and solution methods",
+              "careerRelevance": "Modeling dynamic systems; required for applied tracks",
+              "prerequisites": "MA 124 / MA 225 recommended",
+              "group": "Foundational (Lower Division)"
+            },
+            {
+              "title": "Linear Algebra",
+              "code": "CAS MA 242 or MA 442",
+              "skills": "Matrix theory, linear systems, vector spaces",
+              "careerRelevance": "Central for algorithms, data science, ML, numerical methods",
+              "prerequisites": "MA 124 or placement; some programs require MA 225",
+              "group": "Foundational (Lower Division / Core)"
+            },
+            {
+              "title": "Discrete Math / Combinatorics",
+              "code": "CAS MA 193 or 293 (or CS 131)",
+              "skills": "Proof techniques, discrete structures, combinatorics",
+              "careerRelevance": "Needed for theory, algorithms, and CS-related work",
+              "prerequisites": "High-school math; placement may vary",
+              "group": "Foundational (Lower Division)"
+            },
+            {
+              "title": "Pure Track - Analysis sequence",
+              "code": "CAS MA 511",
+              "skills": "Real analysis, rigorous proofs, advanced math foundations",
+              "careerRelevance": "Preparation for grad math or theoretical CS",
+              "prerequisites": "MA 225, MA 242, instructor consent",
+              "group": "Upper Division (Pure Track)"
+            },
+            {
+              "title": "Applied Track - Focus areas",
+              "code": "CAS MA 411/412, MA 539, MA 565",
+              "skills": "Numerical methods, modeling, applied analysis",
+              "careerRelevance": "Direct application to engineering, physics, computational roles",
+              "prerequisites": "MA 225/226/242 prerequisites vary",
+              "group": "Upper Division (Applied Track)"
+            },
+            {
+              "title": "Statistics Track - core probability/statistics",
+              "code": "CAS MA 213/214 and CAS MA 581/582",
+              "skills": "Probability, statistical inference, stochastic processes",
+              "careerRelevance": "Prepares for data science, actuarial, and statistics careers",
+              "prerequisites": "MA 123/124 pre-reqs; check catalog for sequence",
+              "group": "Upper Division (Statistics Track)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ENG",
+      "majors": [
+        {
+          "name": "Computer Engineering",
+          "programUrl": "https://www.bu.edu/academics/eng/programs/computer-engineering/bs/",
+          "courses": [
+            {
+              "title": "ENG EK 125 - Introduction to Programming for Engineers",
+              "code": "ENG EK 125",
+              "skills": "Programming for engineers (C/C++/Python), problem solving, software basics",
+              "careerRelevance": "Essential for firmware/embedded/software work in CE",
+              "prerequisites": "None (some prior programming helpful)",
+              "group": "College Core (Freshman)"
+            },
+            {
+              "title": "CAS MA 123 - Calculus I",
+              "code": "CAS MA 123",
+              "skills": "Single-variable calculus, foundation for engineering math",
+              "careerRelevance": "Required for engineering math pipeline",
+              "prerequisites": "Placement/AP as applicable",
+              "group": "Math Core (ENG)"
+            },
+            {
+              "title": "CAS MA 124 - Calculus II",
+              "code": "CAS MA 124",
+              "skills": "Series, integration techniques, continuation of calculus",
+              "careerRelevance": "Builds toward multivariate calculus & differential equations",
+              "prerequisites": "MA 123",
+              "group": "Math Core (ENG)"
+            },
+            {
+              "title": "CAS PY 211 - Physics I (Mechanics / Lab)",
+              "code": "CAS PY 211",
+              "skills": "Mechanics, experimental lab skills, problem solving",
+              "careerRelevance": "Physics foundation for circuits, electromagnetics, and systems",
+              "prerequisites": "MA 123 corequisite or prior",
+              "group": "Science Core (ENG)"
+            },
+            {
+              "title": "ENG EK 103 - Computational Linear Algebra",
+              "code": "ENG EK 103",
+              "skills": "Matrix methods, numerical linear algebra, applications",
+              "careerRelevance": "Useful in signal processing, controls, ML for engineers",
+              "prerequisites": "MA 123/124 or concurrent enrollment",
+              "group": "Engineering Core"
+            },
+{
+              "title": "ENG EK 307 - Electric Circuits",
+              "code": "ENG EK 307",
+              "skills": "Circuit analysis, circuit laws, circuit design basics",
+              "careerRelevance": "Core for hardware, electronics, embedded systems",
+              "prerequisites": "PY 211 and MA 124 usually recommended",
+              "group": "Engineering Core"
+            },
+            {
+              "title": "ENG EC 311 - Introduction to Logic Design",
+              "code": "ENG EC 311",
+              "skills": "Digital logic, HDL, combinational/sequential circuits",
+              "careerRelevance": "Foundation for computer architecture, hardware design",
+              "prerequisites": "ENG EK 125 and EK 307 recommended",
+              "group": "Program Requirement (Sophomore)"
+            },
+            {
+              "title": "ENG EC 413 - Computer Organization",
+              "code": "ENG EC 413",
+              "skills": "CPU organization, assembly, pipelining, memory hierarchies",
+              "careerRelevance": "Directly relevant to systems, firmware, architecture",
+              "prerequisites": "EC 311, CS/ENG programming background",
+              "group": "Core (Junior)"
+            },
+            {
+              "title": "ENG EC 330 - Applied Algorithms for Engineering",
+              "code": "ENG EC 330",
+              "skills": "Algorithmic techniques for engineering problems",
+              "careerRelevance": "Supports software-engineering aspects of CE",
+              "prerequisites": "ENG EK 125, MA prerequisites (check catalog)",
+              "group": "Program Requirement (Sophomore/Junior)"
+            },
+            {
+              "title": "ENG EK 381 - Probability, Statistics, and Data Science for Engineers",
+              "code": "ENG EK 381",
+              "skills": "Probability, statistics, data analysis for engineering",
+              "careerRelevance": "Useful for reliability, data analysis, ML in engineering",
+              "prerequisites": "MA 124 or concurrent; prior programming helpful",
+              "group": "Engineering Core"
+            },
+            {
+              "title": "ENG EC 463/464 - Senior Design Project I & II",
+              "code": "ENG EC 463/464",
+              "skills": "Senior capstone: design, prototyping, documentation, teamwork",
+              "careerRelevance": "Capstone engineering experience; required for graduation",
+              "prerequisites": "Completion of core and upper-division prerequisites",
+              "group": "Capstone / Program Requirement (Senior)"
+            },
+            {
+              "title": "Technical & Breadth Electives (examples)",
+              "code": "ENG EC 472, MET/CS electives, EE breadth",
+              "skills": "VLSI, networking, OS, IoT, security electives",
+              "careerRelevance": "Allow specialization toward hardware, systems, networks",
+              "prerequisites": "Prereqs vary by elective (check catalog)",
+              "group": "Electives / Technical"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "colleges": [
+    {
+      "name": "CAS",
+      "majors": [
+        "African American & Black Diaspora Studies",
+        "American Studies",
+        "Ancient Greek",
+        "Ancient Greek & Latin",
+        "Anthropology - Health & Medicine",
+        "Anthropology - Biological",
+        "Anthropology - Sociocultural",
+        "Anthropology & Religion",
+        "Archaeology",
+        "Archaeological & Environmental Sciences",
+        "Architectural Studies",
+        "Asian Studies",
+        "Astronomy",
+        "Astronomy & Physics",
+        "Biochemistry & Molecular Biology",
+        "Biology",
+        "Biology - Behavioral Biology",
+        "Biology - Cell Biology, Molecular Biology & Genetics",
+        "Biology - Ecology & Conservation Biology",
+        "Biology - Neurobiology",
+        "Chemistry",
+        "Chemistry: Chemical Biology",
+        "Chemistry & Physics",
+        "Chinese Language & Literature",
+        "Cinema & Media Studies (CIMS)",
+        "Classical Civilization",
+        "Classics & Archaeology",
+        "Classics & Philosophy",
+        "Classics & Religion",
+        "Comparative Literature",
+        "Computer Science",
+        "Computer Science & Economics",
+        "Earth & Environmental Sciences",
+        "Economics",
+        "Economics & Mathematics",
+        "English",
+        "Environmental Analysis & Policy",
+        "European Studies",
+        "French & Linguistics",
+        "French Studies",
+        "German Language & Literature",
+        "History",
+        "History of Art & Architecture",
+        "Holocaust, Genocide, & Human Rights Studies",
+        "International Relations",
+        "Italian & Linguistics",
+        "Italian Studies",
+        "Japanese Language & Literature",
+        "Japanese & Linguistics",
+        "Korean Language & Literature",
+        "Latin",
+        "Latin American Studies",
+        "Linguistics",
+        "Linguistics & African Languages",
+        "Linguistics & Computer Science",
+        "Linguistics & Speech, Language, and Hearing Sciences",
+        "Linguistics & Philosophy",
+        "Marine Science",
+        "Mathematics",
+        "Mathematics & Computer Science",
+        "Mathematics & Mathematics Education",
+        "Mathematics & Philosophy",
+        "Mathematics & Physics",
+        "Middle East & North Africa Studies",
+        "Middle Eastern & South Asian Languages & Literatures",
+        "Neuroscience",
+        "Philosophy",
+        "Philosophy & Neuroscience",
+        "Philosophy & Physics",
+        "Philosophy & Political Science",
+        "Philosophy & Psychology",
+        "Philosophy & Religion",
+        "Physics",
+        "Physics & Computer Science",
+        "Political Science",
+        "Psychology",
+        "Religion",
+        "Russian Language & Literature",
+        "Science Education",
+        "Sociology",
+        "Spanish",
+        "Spanish & Linguistics",
+        "Statistics & Computer Science"
+      ]
+    },
+    {
+      "name": "CDS",
+      "majors": ["Data Science"]
+    },
+    {
+      "name": "CFA",
+      "majors": [
+        "Acting",
+        "Art",
+        "Art Education",
+        "Composition & Music Theory",
+        "Costume Design",
+        "Costume Production",
+        "Graphic Design",
+        "Lighting Design",
+        "Music (General, Musicology, Theory, Global)",
+        "Music Education",
+        "Painting",
+        "Performance - Piano",
+        "Performance - Organ",
+        "Performance - Harp",
+        "Performance - Voice",
+        "Performance - Woodwinds, Brass, Percussion",
+        "Printmaking",
+        "Scene Design",
+        "Sculpture",
+        "Sound Design",
+        "Stage Management",
+        "Technical Production",
+        "Theatre Arts - Design & Production",
+        "Theatre Arts - Performance"
+      ]
+    },
+    {
+      "name": "COM",
+      "majors": [
+        "Advertising",
+        "Film & Television",
+        "Journalism",
+        "Media Science",
+        "Public Relations"
+      ]
+    },
+    {
+      "name": "ENG",
+      "majors": [
+        "Biomedical Engineering",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Mechanical Engineering"
+      ]
+    },
+    {
+      "name": "SHA",
+      "majors": [
+        "Hospitality Administration",
+        "Hospitality & Communication"
+      ]
+    },
+    {
+      "name": "SAR",
+      "majors": [
+        "Behavior & Health",
+        "Health Science",
+        "Human Physiology",
+        "Nutrition - Dietetics",
+        "Nutrition - Nutrition & Health",
+        "Nutrition - Nutrition Science",
+        "Public Health BS/MPH",
+        "Linguistics & Speech, Language, and Hearing Sciences",
+        "Speech, Language, and Hearing Sciences"
+      ]
+    },
+    {
+      "name": "Questrom",
+      "majors": [
+        "Business Administration - Accounting",
+        "Business Administration - Business Analytics",
+        "Business Administration - Finance",
+        "Business Administration - Independent Concentration",
+        "Business Administration - Information Systems",
+        "Business Administration - Innovation & Entrepreneurship",
+        "Business Administration - Law",
+        "Business Administration - Management & Organizations",
+        "Business Administration - Marketing",
+        "Business Administration - Operations & Technology Management",
+        "Business Administration - Strategy",
+        "Business Administration - Global Business",
+        "Business Administration - Health & Life Sciences Sector",
+        "Business Administration - Real Estate",
+        "Business Administration - Retailing"
+      ]
+    },
+    {
+      "name": "Wheelock",
+      "majors": [
+        "Education & Human Development - Child and Adolescent Mental Health",
+        "Education & Human Development - Deaf Studies & Deaf Education",
+        "Education & Human Development - Educational Design for Transformative Social Futures",
+        "Education & Human Development - Teaching & Learning",
+        "Education & Human Development - Youth Development & Justice"
+      ]
+    }
+  ]
+}

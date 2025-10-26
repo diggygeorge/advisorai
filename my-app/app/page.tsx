@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { signOut } from '../app/logout/actions'
 import { Archivo_Black } from 'next/font/google'
 import { Inter } from 'next/font/google'
 import { Playfair_Display } from 'next/font/google'
 import { useRouter } from 'next/navigation'
+import { buCoursesHub } from './courses'
 
 
 
@@ -32,6 +33,34 @@ export default function Dashboard() {
   const [school, setSchool] = useState('')
 
   const router = useRouter()
+
+  // Calculate course stats
+  const courseStats = useMemo(() => {
+    const completed = buCoursesHub.filter(c => c.status === 'Completed').length
+    const inProgress = buCoursesHub.filter(c => c.status === 'In Progress').length
+    const missing = buCoursesHub.filter(c => c.status === 'Missing').length
+    
+    const allHubUnits = new Set<string>()
+    const completedHubUnits = new Set<string>()
+    
+    buCoursesHub.forEach(course => {
+      course.hubUnits.forEach(unit => {
+        allHubUnits.add(unit)
+        if (course.status === 'Completed') {
+          completedHubUnits.add(unit)
+        }
+      })
+    })
+
+    return {
+      totalCourses: buCoursesHub.length,
+      completed,
+      inProgress,
+      missing,
+      totalHubUnits: allHubUnits.size,
+      completedHubUnits: completedHubUnits.size
+    }
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -61,6 +90,34 @@ export default function Dashboard() {
         </form>
       </nav>
 
+      {/* Stats Section */}
+      <div className="bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-600">{courseStats.completed}</div>
+              <div className="text-xs text-gray-600">Courses Completed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-yellow-600">{courseStats.inProgress}</div>
+              <div className="text-xs text-gray-600">In Progress</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-red-600">{courseStats.missing}</div>
+              <div className="text-xs text-gray-600">Missing</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">{courseStats.completedHubUnits}/{courseStats.totalHubUnits}</div>
+              <div className="text-xs text-gray-600">Hub Units</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">{Math.round((courseStats.completed / courseStats.totalCourses) * 100)}%</div>
+              <div className="text-xs text-gray-600">Progress</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
       <main className="flex flex-col items-center justify-center mt-40 px-4">
       <h1 className={`${playfair.className} text-slate-900 text-4xl font-semibold mb-10`}>
@@ -75,7 +132,7 @@ export default function Dashboard() {
           <select
           value={school}
           onChange={(e) => setSchool(e.target.value)}
-          className="flex-[2] px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white cursor-pointer">
+          className="flex-[2] px-4 py-3 border text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white cursor-pointer">
           <option value="">Select School</option>
           <option value="CAS">CAS</option>
           <option value="CFA">CFA</option>
@@ -93,7 +150,7 @@ export default function Dashboard() {
             placeholder="Enter your major*"
             value={major}
             onChange={(e) => setMajor(e.target.value)}
-            className="px-4 py-3 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-3 border text-black rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           </div>
 
@@ -102,7 +159,7 @@ export default function Dashboard() {
             placeholder="Enter your career path*"
             value={career}
             onChange={(e) => setCareer(e.target.value)}
-            className="px-4 py-3 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-3 border text-black rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             type="submit"
