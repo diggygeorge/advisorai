@@ -48,8 +48,7 @@ export default function Dashboard() {
     // TODO: send these inputs to your AdvisorAI backend
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Navbar */}
+    <div className="min-h-screen bg-gray-50 text-slate-900 dark:bg-gray-50 dark:text-slate-900">
       <nav className="flex justify-between items-center px-6 py-4 bg-slate-700 shadow-md">
         <div className={`${archivo.className} text-2xl tracking-wider font-bold text-white`}>
           AdvisorAI</div>
