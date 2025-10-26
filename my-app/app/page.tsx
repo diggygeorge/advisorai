@@ -48,16 +48,14 @@ export default function Dashboard() {
     // TODO: send these inputs to your AdvisorAI backend
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Navbar */}
+    <div className="min-h-screen bg-gray-50 text-slate-900 dark:bg-gray-50 dark:text-slate-900">
       <nav className="flex justify-between items-center px-6 py-4 bg-slate-700 shadow-md">
         <div className={`${archivo.className} text-2xl tracking-wider font-bold text-white`}>
           AdvisorAI</div>
         <form action={signOut}>
           <button
             type="submit"
-            className={`${inter.className} rounded-md bg-white px-4 py-2 text-slate-700 hover:bg-slate-200 cursor-pointer transition`}
-          >
+            className={`${inter.className} rounded-md bg-white px-4 py-2 text-slate-700 hover:bg-slate-200 cursor-pointer transition`}>
             Sign Out
           </button>
         </form>
