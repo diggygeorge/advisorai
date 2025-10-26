@@ -40,7 +40,10 @@ export default function Dashboard() {
     return
     }
 
-    router.push('/newpage')
+    router.push(
+        `/newpage?school=${encodeURIComponent(school)}&major=${encodeURIComponent(major)}&career=${encodeURIComponent(career)}`
+
+    )
   }
     // TODO: send these inputs to your AdvisorAI backend
 
