@@ -1,5 +1,3 @@
-// /app/dashboard/page.tsx (or your component file)
-
 'use client'
 
 import { useState } from 'react'
@@ -8,6 +6,8 @@ import { Archivo_Black } from 'next/font/google'
 import { Inter } from 'next/font/google'
 import { Playfair_Display } from 'next/font/google'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const archivo = Archivo_Black({ subsets: ['latin'], weight: ['400'], display: 'swap' });
 const inter = Inter({ subsets: ['latin'], weight: ['500'] });
@@ -25,15 +25,27 @@ export default function Dashboard() {
       alert('Please fill in all fields before continuing.')
       return
     }
-    router.push(`/newpage?school=${encodeURIComponent(school)}&major=${encodeURIComponent(major)}&career=${encodeURIComponent(career)}`)
+    router.push(
+      `/newpage?school=${encodeURIComponent(school)}&major=${encodeURIComponent(major)}&career=${encodeURIComponent(career)}`
+    )
   }
 
   return (
-    <div className="min-h-screen bg-white text-slate-900" style={{ fontFamily: '"Glacial Indifference", Arial, sans-serif' }}>
+    <div className={`min-h-screen bg-white text-slate-900 ${inter.className}`} style={{ fontFamily: '"Glacial Indifference", Arial, sans-serif' }}>
       <nav className="flex justify-between items-center px-8 py-4 bg-white border-b border-gray-200">
-        <div className="text-xl font-bold tracking-wide text-slate-900">
-          AdvisorAI
-        </div>
+        <Link href="/" className="flex items-center space-x-3">
+          <Image
+            src="/chart-network.png"
+            alt="AdvisorAI Logo"
+            width={36}
+            height={36}
+            className="object-contain"
+            priority
+          />
+          <span className="text-xl font-bold tracking-wide text-slate-900">
+            AdvisorAI
+          </span>
+        </Link>
         <form action={signOut}>
           <button
             type="submit"
@@ -43,17 +55,13 @@ export default function Dashboard() {
           </button>
         </form>
       </nav>
-      
-      {/* Main Content - Centered Box */}
+
       <main className="flex items-center justify-center px-4" style={{ minHeight: '90vh' }}>
         <div className="w-full max-w-md bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
           <h1 className="text-slate-900 text-3xl font-semibold mb-8 text-center" style={{ fontWeight: 700 }}>
             Plan Your Academic Path
           </h1>
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-6"
-          >
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="flex gap-4">
               <select
                 value={school}

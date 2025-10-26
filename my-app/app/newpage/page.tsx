@@ -111,11 +111,11 @@ export default function NewPage() {
       {/* Visualize Button */}
       <div className="mt-8 flex justify-center">
         <button
-          type="button"
-          className="px-10 py-2 bg-slate-700 text-white rounded-md hover:bg-slate-900 cursor-pointer transition"
-        >
-          Visualize
-        </button>
+    type="button"
+    onClick={() => router.push('/visualize')}
+    className="px-10 py-2 bg-slate-700 text-white rounded-md hover:bg-slate-900 cursor-pointer transition">
+    Visualize
+    </button>
       </div>
     </div>
   )
