@@ -14,6 +14,7 @@ const archivo = Archivo_Black({ subsets: ['latin'], weight: ['400'], display: 's
 const inter = Inter({ subsets: ['latin'], weight: ['500'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['500'] });
 
+
 export default function Dashboard() {
   const [major, setMajor] = useState('')
   const [career, setCareer] = useState('')
