@@ -35,8 +35,8 @@ export default function Dashboard() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!major.trim() || !career.trim()) {
-    alert('Please fill in both fields before continuing.')
+    if (!school.trim() || !major.trim() || !career.trim()) {
+    alert('Please fill in all fields before continuing.')
     return
     }
 
@@ -80,13 +80,13 @@ export default function Dashboard() {
           className="flex-[2] px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white cursor-pointer">
           <option value="">Select School</option>
           <option value="CAS">CAS</option>
-          <option value="CAS">CFA</option>
-          <option value="CAS">COM</option>
-          <option value="CAS">QST</option>
-          <option value="CAS">SAR</option>
-          <option value="CFA">ENG</option>
-          <option value="CFA">WHE</option>
-          <option value="QST">MET</option>
+          <option value="CFA">CFA</option>
+          <option value="COM">COM</option>
+          <option value="QST">QST</option>
+          <option value="SAR">SAR</option>
+          <option value="ENG">ENG</option>
+          <option value="WHE">WHE</option>
+          <option value="MET">MET</option>
           </select>
 
 
