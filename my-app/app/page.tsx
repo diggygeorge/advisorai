@@ -60,7 +60,6 @@ export default function Dashboard() {
         </form>
       </nav>
 
-      {/* Main Content */}
       <main className="flex items-center justify-center px-4" style={{ minHeight: '90vh' }}>
         <div className="w-full max-w-md bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
           <h1 className="text-slate-900 text-3xl font-semibold mb-8 text-center" style={{ fontFamily: '"Glacial Indifference", Arial, sans-serif' }}>
