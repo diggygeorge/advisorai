@@ -78,7 +78,7 @@ export default function NewPage() {
 
       {/* Results Table */}
       <div className="mt-48 w-full max-w-6xl overflow-x-auto">
-        <table className="min-w-full border border-gray-300 shadow-md rounded-2xl overflow-hidden">
+        <table className="min-w-full border border-gray-300 shadow-md rounded-2xl overflow-hidden text-slate-800">
           <thead className="bg-gray-100 text-slate-800">
             <tr>
               <th className="px-3 py-2 text-center w-10"></th>
@@ -94,7 +94,7 @@ export default function NewPage() {
             {filteredResults.map(([, courseName, courseCode, skills, relevance, prereq, group], i) => (
               <tr key={i} className="even:bg-gray-50 hover:bg-amber-200 transition">
                 <td className="px-3 py-2 text-center">
-                  <input type="checkbox" className="accent-slate-700 cursor-pointer transform scale-120"/>
+                  <input type="checkbox" className="accent-slate-700 text-slate-900 cursor-pointer transform scale-120"/>
                 </td>
                 <td className="px-4 py-2">{courseName}</td>
                 <td className="px-4 py-2">{courseCode}</td>
