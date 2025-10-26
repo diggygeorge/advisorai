@@ -5,6 +5,8 @@ import { signOut } from '../app/logout/actions'
 import { Archivo_Black } from 'next/font/google'
 import { Inter } from 'next/font/google'
 import { Playfair_Display } from 'next/font/google'
+import { useRouter } from 'next/navigation'
+
 
 
 const archivo = Archivo_Black({
@@ -29,11 +31,18 @@ export default function Dashboard() {
   const [career, setCareer] = useState('')
   const [school, setSchool] = useState('')
 
+  const router = useRouter()
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log({ major, career })
-    // TODO: send these inputs to your AdvisorAI backend
+    if (!major.trim() || !career.trim()) {
+    alert('Please fill in both fields before continuing.')
+    return
+    }
+
+    router.push('/newpage')
   }
+    // TODO: send these inputs to your AdvisorAI backend
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -80,7 +89,7 @@ export default function Dashboard() {
 
           <input
             type="text"
-            placeholder="Enter your major"
+            placeholder="Enter your major*"
             value={major}
             onChange={(e) => setMajor(e.target.value)}
             className="px-4 py-3 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -89,7 +98,7 @@ export default function Dashboard() {
 
           <input
             type="text"
-            placeholder="Enter your career path"
+            placeholder="Enter your career path*"
             value={career}
             onChange={(e) => setCareer(e.target.value)}
             className="px-4 py-3 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
