@@ -55,8 +55,7 @@ export default function Dashboard() {
         <form action={signOut}>
           <button
             type="submit"
-            className={`${inter.className} rounded-md bg-white px-4 py-2 text-slate-700 hover:bg-slate-200 cursor-pointer transition`}
-          >
+            className={`${inter.className} rounded-md bg-white px-4 py-2 text-slate-700 hover:bg-slate-200 cursor-pointer transition`}>
             Sign Out
           </button>
         </form>
