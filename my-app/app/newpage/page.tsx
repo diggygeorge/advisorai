@@ -19,15 +19,16 @@ const results = [
   ["Full Stack Software Engineer","Information Structures with Python","MET CS 521","Object-Oriented Programming, Data Structures, Python","Highly Relevant","Programming Experience","Core"]
 ]
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['700'],
-})
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] })
+const inter = Inter({ subsets: ['latin'], weight: ['400'] })
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400'],
-})
+// Academic schedule data
+const schedule = {
+  Freshman: { Fall: ['MA123', 'CC101', 'CS111', 'HI300'], Spring: ['CS112', 'CS131', 'LK111', 'SM131'] },
+  Sophomore: { Fall: ['WR152', 'CS132', 'CS210', 'LK112', 'SM132'], Spring: ['CS237', 'CS330', 'LK211', 'EC102'] },
+  Junior: { Fall: ['CS351', 'CS460', 'LK212', 'CC221'], Spring: [] },
+  Senior: { Fall: [], Spring: [] },
+}
 
 export default function NewPage() {
   const router = useRouter()
@@ -36,12 +37,13 @@ export default function NewPage() {
   const searchParams = useSearchParams()
   const career = searchParams.get('career')
 
-  const filteredResults = results.filter(([career]) =>
-    career.toLowerCase().includes(careerSearch.toLowerCase())
+  const filteredResults = results.filter(([careerName]) =>
+    careerName.toLowerCase().includes(careerSearch.toLowerCase())
   )
 
   return (
     <div className="min-h-screen bg-gray-50 text-slate-900 relative flex flex-col items-center py-10 px-8">
+      
       {/* Header */}
       <div className="absolute top-6 left-6 flex flex-col gap-4">
         <div className="flex items-center gap-3">
@@ -76,9 +78,32 @@ export default function NewPage() {
         </h1>
       </div>
 
-      {/* Results Table */}
-      <div className="mt-48 w-full max-w-6xl overflow-x-auto">
-        <table className="min-w-full border border-gray-300 shadow-md rounded-2xl overflow-hidden text-slate-800">
+      {/* Academic Schedule Table */}
+      <div className="mt-32 w-full max-w-4xl mb-8">
+        <h2 className="text-xl font-semibold mb-3">Academic Schedule</h2>
+        <table className="min-w-full border border-gray-300 shadow-sm rounded-xl overflow-hidden text-sm">
+          <thead className="bg-gray-100 text-slate-800">
+            <tr>
+              <th className="px-4 py-2 text-left">Semester</th>
+              <th className="px-4 py-2 text-left">Classes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(schedule).map(([year, semesters]) =>
+              Object.entries(semesters).map(([semester, classes], i) => (
+                <tr key={`${year}-${semester}-${i}`} className="even:bg-gray-50">
+                  <td className="px-4 py-2 font-medium">{`${year} - ${semester}`}</td>
+                  <td className="px-4 py-2">{classes.length > 0 ? classes.join(', ') : '—'}</td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Main Courses Table */}
+      <div className="mt-4 w-full max-w-6xl overflow-x-auto">
+        <table className="min-w-full border border-gray-300 shadow-md rounded-2xl overflow-hidden">
           <thead className="bg-gray-100 text-slate-800">
             <tr>
               <th className="px-3 py-2 text-center w-10"></th>
@@ -94,7 +119,7 @@ export default function NewPage() {
             {filteredResults.map(([, courseName, courseCode, skills, relevance, prereq, group], i) => (
               <tr key={i} className="even:bg-gray-50 hover:bg-amber-200 transition">
                 <td className="px-3 py-2 text-center">
-                  <input type="checkbox" className="accent-slate-700 text-slate-900 cursor-pointer transform scale-120"/>
+                  <input type="checkbox" className="accent-slate-700 cursor-pointer transform scale-120"/>
                 </td>
                 <td className="px-4 py-2">{courseName}</td>
                 <td className="px-4 py-2">{courseCode}</td>
